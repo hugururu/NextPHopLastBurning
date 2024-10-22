@@ -17,17 +17,17 @@ const schema = a.schema({
 
 export type Schema = ClientSchema<typeof schema>;
 
-export const data = defineData({
-  schema,
-  authorizationModes: {
-    defaultAuthorizationMode: "apiKey",
-    // API Key is used for a.allow.public() rules
-    apiKeyAuthorizationMode: {
-      expiresInDays: 30,
-    },
-  },
-});
-const songSchema = a.schema({
+// export const data = defineData({
+//   schema,
+//   authorizationModes: {
+//     defaultAuthorizationMode: "apiKey",
+//     // API Key is used for a.allow.public() rules
+//     apiKeyAuthorizationMode: {
+//       expiresInDays: 30,
+//     },
+//   },
+// })
+const Schema = a.schema({
   Song: a
     .model({
       id: a.id().required(),
@@ -37,10 +37,10 @@ const songSchema = a.schema({
     .authorization((allow) => [allow.publicApiKey()]),
 });
 
-export type SongSchema = ClientSchema<typeof songSchema>;
+export type SongSchema = ClientSchema<typeof Schema>;
 
-export const songData = defineData({
-  schema,
+export const data = defineData({
+  schema: Schema,
   authorizationModes: {
     defaultAuthorizationMode: "apiKey",
 
