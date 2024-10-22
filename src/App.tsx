@@ -26,7 +26,7 @@ function App() {
 
   return (
     <main>
-      <h1>이게 인생이고 이게 지옥이야</h1>
+      <h1>안녕하세요 NextHop 테스트 페이지 입니당</h1>
       <button onClick={createTodo}>+ new</button>
       <ul>
         {todos.map((todo) => (
@@ -36,13 +36,13 @@ function App() {
         ))}
       </ul>
       <div>
-        다조까~ 다조까~ 
+        밑에 있는거 누르면 큰일나요 
         <br />
         <a href="https://main.durp3ydsr3ei2.amplifyapp.com/">
           난 커서 해리포터가 될꺼야 엄마.
         </a>
       </div>
-      <button onClick={signOut}>로그아웃하지마 씨발아</button>
+      <button onClick={signOut}>진짜 로그아웃 하실껀가요? 진짜로?</button>
     </main>
   );
 }
